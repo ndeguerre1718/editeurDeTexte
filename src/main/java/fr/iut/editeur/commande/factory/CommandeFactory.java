@@ -20,6 +20,7 @@ public class CommandeFactory {
         switch (name) {
             case "ajouter" : return new CommandeAjouter(document, parameters);
             case "remplacer" : return new CommandeRemplacer(document,parameters);
+            case "masjucules" : return new CommandeMajuscule(document,parameters); //cette commande met les caractères en maj à partir du debut jusqu a la fin
             default: return null;
         }
     }
