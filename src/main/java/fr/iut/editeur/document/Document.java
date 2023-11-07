@@ -45,7 +45,6 @@ public class Document {
     public void clear() {
         String texteApres = texte.substring(0, texte.length());
         texte = texteApres;
-        texte += 'a';
     }
 
     @Override
