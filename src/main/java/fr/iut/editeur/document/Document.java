@@ -7,6 +7,8 @@ public class Document {
     public Document() {
         this.texte = "";
     }
+
+
 	
     public String getTexte() {
         return texte;
@@ -18,6 +20,15 @@ public class Document {
 
     public void ajouter(String texte) {
         this.texte += texte;
+    }
+
+    public void remplacer(int start, int end, String remplacement) {
+        if (remplacement.isEmpty()) {
+            remplacement = " ";
+        }
+        String leftPart = texte.substring(0, start);
+        String rightPart = texte.substring(end);
+        texte = leftPart + remplacement + rightPart;
     }
 
     @Override
