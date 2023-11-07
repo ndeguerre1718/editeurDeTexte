@@ -42,6 +42,12 @@ public class Document {
         texte = texteAvant + texteApres;
     }
 
+    public void clear() {
+        String texteApres = texte.substring(0, texte.length());
+        texte = texteApres;
+        texte += 'a';
+    }
+
     @Override
     public String toString() {
         return this.texte;
