@@ -36,6 +36,12 @@ public class Document {
         remplacer(start, end, portionEnMajuscules);
     }
 
+    public void effacer(int start, int end) {
+        String texteAvant = texte.substring(0, start);
+        String texteApres = texte.substring(end);
+        texte = texteAvant + texteApres;
+    }
+
     @Override
     public String toString() {
         return this.texte;
