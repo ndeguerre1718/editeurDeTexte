@@ -40,6 +40,25 @@ public class Document {
         remplacer(start, end, portionEnMinuscule);
     }
 
+    public void effacer(int start, int end) {
+        String texteAvant = texte.substring(0, start);
+        String texteApres = texte.substring(end);
+        texte = texteAvant + texteApres;
+    }
+
+    public void clear() {
+        texte = texte.substring(0, texte.length());
+    }
+
+    public void inserer(int index, String chainChara) {
+        if (index < 0 || index > texte.length()) {
+            throw new IllegalArgumentException("L'indice doit être compris entre 0 et la longueur du texte inclus.");
+        }
+
+        String texteAvant = texte.substring(0, index);
+        String texteApres = texte.substring(index);
+        texte = texteAvant + chainChara + texteApres;
+    }
     @Override
     public String toString() {
         return this.texte;
