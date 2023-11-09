@@ -15,7 +15,6 @@ public class CommandeClear extends CommandeDocument{
                 System.err.println("Format attendu : clear");
         }else {
             this.document.clear();
-            this.document.ajouter(getDescriptionCommande());
             super.executer();
         }
     }

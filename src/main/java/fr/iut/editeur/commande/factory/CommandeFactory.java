@@ -22,7 +22,7 @@ public class CommandeFactory {
             case "remplacer" : return new CommandeRemplacer(document,parameters);
             case "majuscules" : return new CommandeMajuscule(document,parameters); //cette commande met les caractères en maj à partir du debut jusqu a la fin
             case "effacer" : return new CommandeEffacer(document,parameters);
-            case "clear" : return new CommandeClear(document,parameters);
+            case "clear", "clearDesc": return new CommandeClear(document,parameters);
             case "inserer" : return new CommandeInserer(document,parameters);
             case "minuscules" : return new CommandeMinuscule(document,parameters);
             default: return null;

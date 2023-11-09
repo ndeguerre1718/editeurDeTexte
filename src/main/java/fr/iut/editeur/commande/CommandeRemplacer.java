@@ -19,7 +19,6 @@ public class CommandeRemplacer extends CommandeDocument {
             int fin = Integer.parseInt(parameters[2]);
             String texte = parameters[3];
             this.document.remplacer(debut, fin, texte);
-            this.document.ajouter(getDescriptionCommande());
             super.executer();
         }
     }

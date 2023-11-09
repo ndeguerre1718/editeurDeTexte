@@ -15,7 +15,6 @@ public class CommandeInserer extends CommandeDocument{
         }else {
             int debut = Integer.parseInt(parameters[1]);
             this.document.inserer(debut, parameters[2]);
-            this.document.ajouter(getDescriptionCommande());
             super.executer();
         }
     }

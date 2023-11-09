@@ -15,12 +15,11 @@ public class CommandeAjouter extends CommandeDocument {
             System.out.println(getDescriptionCommande());
         }else if(parameters.length < 2) {
             System.err.println("Format attendu : ajouter;texte");
-            return;
+        }else {
+            String texte = parameters[1];
+            this.document.ajouter(texte);
+            super.executer();
         }
-        String texte = parameters[1];
-        this.document.ajouter(texte);
-        this.document.ajouter(getDescriptionCommande());
-        super.executer();
     }
 
     @Override
