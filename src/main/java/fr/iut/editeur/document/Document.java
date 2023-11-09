@@ -35,7 +35,7 @@ public class Document {
         String portionEnMajuscules = texte.substring(start, end).toUpperCase();
         remplacer(start, end, portionEnMajuscules);
     }
-    public void minuscule(int start, int end){
+    public void minuscules(int start, int end){
         String portionEnMinuscule = texte.substring(start, end).toLowerCase();
         remplacer(start, end, portionEnMinuscule);
     }
@@ -47,7 +47,7 @@ public class Document {
     }
 
     public void clear() {
-        texte = texte.substring(0, texte.length());
+        remplacer(0, this.texte.length(), "");
     }
 
     public void inserer(int index, String chainChara) {

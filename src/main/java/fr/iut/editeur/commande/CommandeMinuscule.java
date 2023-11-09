@@ -14,7 +14,7 @@ public class CommandeMinuscule extends CommandeDocument{
         }
         int debut = Integer.parseInt(parameters[1]);
         int fin = Integer.parseInt(parameters[2]);
-        this.document.minuscule(debut,fin);
+        this.document.minuscules(debut,fin);
         super.executer();
     }
 }
