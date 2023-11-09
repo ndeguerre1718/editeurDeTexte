@@ -8,13 +8,20 @@ public class CommandeMinuscule extends CommandeDocument{
     }
     @Override
     public void executer() {
-        if(parameters.length < 3) {
-            System.err.println("Format attendu : masjucules;depart;fin");
-            return;
+        if(parameters[0].equals("minuscules") &&(parameters.length==1)){
+            System.out.println(getDescriptionCommande());
+        }else if(parameters.length < 3) {
+            System.err.println("Format attendu : minuscules;depart;fin");
+        }else {
+
+            int debut = Integer.parseInt(parameters[1]);
+            int fin = Integer.parseInt(parameters[2]);
+            this.document.minuscules(debut, fin);
+            super.executer();
         }
-        int debut = Integer.parseInt(parameters[1]);
-        int fin = Integer.parseInt(parameters[2]);
-        this.document.minuscules(debut,fin);
-        super.executer();
+    }
+    @Override
+    public String getDescriptionCommande() {
+        return "/ Commande : minuscules";
     }
 }

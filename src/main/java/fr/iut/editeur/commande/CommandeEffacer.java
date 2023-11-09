@@ -11,15 +11,15 @@ public class CommandeEffacer extends CommandeDocument{
     public void executer() {
         if(parameters[0].equals("effacer") &&(parameters.length==1)){
             System.out.println(getDescriptionCommande());
-        } else if(parameters.length < 2) {
+        } else if(parameters.length < 3) {
             System.err.println("Format attendu : effacer;debut;fin");
             return;
+        }else {
+            int debut = Integer.parseInt(parameters[1]);
+            int fin = Integer.parseInt(parameters[2]);
+            this.document.effacer(debut, fin);
+            super.executer();
         }
-        int debut = Integer.parseInt(parameters[1]);
-        int fin = Integer.parseInt(parameters[2]);
-        this.document.effacer(debut,fin);
-        this.document.ajouter(getDescriptionCommande());
-        super.executer();
     }
 
     @Override
