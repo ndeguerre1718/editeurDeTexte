@@ -43,10 +43,18 @@ public class Document {
     }
 
     public void clear() {
-        String texteApres = texte.substring(0, texte.length());
-        texte = texteApres;
+        texte = texte.substring(0, texte.length());
     }
 
+    public void inserer(int index, String chainChara) {
+        if (index < 0 || index > texte.length()) {
+            throw new IllegalArgumentException("L'indice doit être compris entre 0 et la longueur du texte inclus.");
+        }
+
+        String texteAvant = texte.substring(0, index);
+        String texteApres = texte.substring(index);
+        texte = texteAvant + chainChara + texteApres;
+    }
     @Override
     public String toString() {
         return this.texte;

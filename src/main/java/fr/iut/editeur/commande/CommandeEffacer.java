@@ -13,8 +13,8 @@ public class CommandeEffacer extends CommandeDocument{
             System.err.println("Format attendu : effacer;debut;fin");
             return;
         }
-        int debut = Integer.parseInt(parameters[0]);
-        int fin = Integer.parseInt(parameters[1]);
+        int debut = Integer.parseInt(parameters[1]);
+        int fin = Integer.parseInt(parameters[2]);
         this.document.effacer(debut,fin);
         super.executer();
     }
