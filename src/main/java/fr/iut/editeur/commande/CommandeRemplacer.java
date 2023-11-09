@@ -10,6 +10,9 @@ public class CommandeRemplacer extends CommandeDocument {
 
     @Override
     public void executer() {
+        if (parameters[0].equals("remplacer") &&(parameters.length==1)) {
+            System.out.println(getDescriptionCommande());
+        }
         if(parameters.length < 4) {
             if (!parameters[3].isEmpty()) {
                 System.err.println("Format attendu : remplacer;debut;fin;texte");
@@ -20,6 +23,12 @@ public class CommandeRemplacer extends CommandeDocument {
         int fin = Integer.parseInt(parameters[2]);
         String texte = parameters[3];
         this.document.remplacer(debut,fin,texte);
+        this.document.ajouter(getDescriptionCommande());
         super.executer();
+    }
+
+    @Override
+    public String getDescriptionCommande() {
+        return "Commande : remplacer";
     }
 }
