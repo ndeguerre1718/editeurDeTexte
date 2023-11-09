@@ -43,9 +43,9 @@ public class Document {
     }
 
     public void clear() {
-        String texteApres = texte.substring(0, texte.length());
-        texte = texteApres;
+        texte = texte.substring(0, texte.length());
     }
+
 
     @Override
     public String toString() {
