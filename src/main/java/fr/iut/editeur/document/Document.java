@@ -39,7 +39,7 @@ public class Document {
      * @param texte Le texte à ajouter à la fin du document.
      */
     public void ajouter(String texte) {
-        this.texte += texte + "a";
+        this.texte += texte;
     }
 
     /**
